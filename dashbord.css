@@ -1,6 +1,9 @@
 :root {
-    --text-link: #808080;
-    --active-sideNav-color: rgba(128, 128, 128, 0.2);
+    --text-link: #525252;
+    --normal-blue: #EBF3FE;
+    --base-blue: #dfe9f7;
+
+    --bg-white: #ffffff;
 }
 
 /* Top navbar  */
@@ -11,6 +14,18 @@
     width: 100vw;
     height: 69px;
     border-bottom: 1px solid #eee;
+    background: var(--bg-white);
+}
+
+#open-close-btn {
+    padding: 5px 18px;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+#open-close-btn:hover {
+    color: rgb(124, 189, 219);
+    background: var(--normal-blue);
 }
 
 .dashbord-sidebar { /* dashbord sidebar */
@@ -19,6 +34,7 @@
     left: 0;
     width: 69px;
     height: 100vh;
+    background: var(--bg-white);
     border-right: 1px solid #eee;
     transition: 0.3s;
     overflow: hidden;
@@ -46,7 +62,12 @@
 }
 
 .navLink.active {
-    background: var(--active-sideNav-color);
+    background: var(--normal-blue);
+    transition: 0.3s ease-in;
+}
+
+.navLink.active:hover {
+    background: var(--base-blue);
 }
 
 .navLink-icon {
@@ -80,7 +101,12 @@
 } */
 
 .logout-btn {
-    background: var(--active-sideNav-color);
+    background: var(--normal-blue);
+    transition: 0.3s ease-in;
+}
+
+.logout-btn:hover {
+    background: var(--base-blue);
 }
 
 @media screen and (max-width: 750px) {
@@ -104,13 +130,11 @@
     #overlay.h {
         display: none;
     }
-
 }
 
 .showSlide {
     width: 100vw; 
 }
-
 
 /* Custom classes  */
 .cursor-pointer {
